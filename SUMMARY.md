@@ -9,4 +9,4 @@
 
 ## MALWARE ANALYSIS
 
-* [Ruski Malware 1](malware-analysis/ruski-malware-1.md)
+* [Ruski Malware](malware-analysis/ruski-malware.md)
