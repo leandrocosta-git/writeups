@@ -6,7 +6,7 @@ description: 'category: forensics'
 
 **Platform:** PicoCTF&#x20;
 
-**Difficulty: **<mark style="color:green;">**easy**</mark>
+**Difficulty:&#x20;**<mark style="color:green;">**easy**</mark>
 
 ***
 
