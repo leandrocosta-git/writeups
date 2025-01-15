@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Writeups](README.md)
+* [Hunting License](hunting-license.md)
 
 ## forensics
 
@@ -10,7 +11,3 @@
 ## MALWARE ANALYSIS
 
 * [Ruski Malware](malware-analysis/ruski-malware.md)
-
-## Group 1
-
-* [Shellcode](group-1/shellcode.md)
