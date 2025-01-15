@@ -55,7 +55,7 @@ Taking into account how the reverse function is coded
 
 <figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-Its possible to make a script to get the third password.
+Its possible to make a simple script to get the third password.
 
 ```python
 p2 = [0x47, 0x7b, 0x7a, 0x61, 0x77, 0x52, 0x7d, 0x77, 0x55, 0x7a, 0x7d, 0x72, 0x7f, 0x32, 0x32, 0x32, 0x13]
@@ -75,4 +75,8 @@ Third password: ThirdAndFinal!!!
 
 
 
-From here, we gotta nc this.
+From here, we just gotta **nc** this and use the previous info we got.
+
+<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
