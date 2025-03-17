@@ -11,21 +11,21 @@ description: 'category: reverse engineering'
 \
 As usual, I started with the file command to see the info about this ELF.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Since the file was not stripped, I used the strings to see some possible info about flags or password
 
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 Since I would like to see how and where were the functions called, I opened ghidra. Here, I noticed the questionnaire begins with a "y" response, followed by the call of exam().
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Into the exam function, we can get the first password we need which was hardcoded as "PasswordNumeroUno".
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 First password: PasswordNumeroUno
 
@@ -39,7 +39,7 @@ By converting the bytes of information inside t, manually or with hep from ghidr
 
 0 w T d r 0 w s s 4 P
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 By reversing this with a max length of 0x11 bytes we get the second password.
 
@@ -49,11 +49,11 @@ Second password: P4ssw0rdTw0
 
 Then the main function calls xor with the following parameters : null string, t2, 0x11 and 0x13. From that, we need to see what's inside t2.
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Taking into account how the reverse function is coded
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Its possible to make a simple script to get the third password.
 
@@ -69,7 +69,7 @@ for i in range(p3):
 print(password)
 ```
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 Third password: ThirdAndFinal!!!
 
@@ -77,6 +77,6 @@ Third password: ThirdAndFinal!!!
 
 From here, we just gotta **nc** this and use the previous info we got.
 
-<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
