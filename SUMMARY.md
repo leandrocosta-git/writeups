@@ -17,3 +17,7 @@
 ## Misc
 
 * [Trapped in Plain Sight 2](misc/trapped-in-plain-sight-2.md)
+
+***
+
+* [Permissions](permissions.md)
