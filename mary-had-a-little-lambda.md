@@ -22,8 +22,8 @@ The challenge provided the following credentials:
 
 ```
 [devopsadmin]
-aws_access_key_id
-aws_secret_access_key
+aws_access_key_id = AKIA...REDACTED
+aws_secret_access_key = ...REDACTED...
 region=us-east-1
 ```
 
@@ -103,9 +103,11 @@ Bingo! This meant I could assume the Lambda role!
 
 
 
-Once I discovered that the IAM role `lambda_role` had a **trust relationship** allowing the `devopsadmin` user to assume it, I leveraged this to **escalate my permissions**.
+Once I discovered that the IAM role `lambda_role` had a **trust relationship** allowing the `devopsadmin` user via its `AssumeRolePolicyDocument`, I realized I could exploit this to escalate privileges.&#x20;
 
-I executed the following command:
+
+
+So, I used `sts assume-role` to assume the role and gain additional permissions:
 
 <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
