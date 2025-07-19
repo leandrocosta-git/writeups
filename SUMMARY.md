@@ -21,3 +21,4 @@
 ***
 
 * [Permissions](permissions.md)
+* [Mary had a little lambda](mary-had-a-little-lambda.md)
