@@ -1,6 +1,5 @@
 ---
 description: misc, cloud
-hidden: true
 ---
 
 # Mary had a little lambda
