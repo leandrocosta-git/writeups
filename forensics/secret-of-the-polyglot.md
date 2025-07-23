@@ -1,5 +1,6 @@
 ---
 description: 'category: forensics'
+hidden: true
 ---
 
 # Secret of the Polyglot
