@@ -121,7 +121,7 @@ Now with elevated privileges, I tried to access the parameter store:
 
 WE GOT A VALUE!
 
-This returned the database password witch was the challenge flag.
+This returned the database password which was the challenge flag.
 
 
 
